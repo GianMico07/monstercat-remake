@@ -1,0 +1,521 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* h1{
+
+    font-size: 48px;
+    font-weight: 500;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F1F1F1;
+    background-color: red;
+    letter-spacing: 0.1em;
+} */
+
+*{
+    font-family: 'Monument Extended',Arial,'Helvetica',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    @apply text-white tracking-[0.1em]
+       
+}
+
+body{
+    /* background-image: url(https://cdn.monstercat.com/background-tile.webp); */
+    /* background-repeat: repeat;
+    overflow-x: hidden;
+    background-color: #100E0E; */
+    background-color: #100E0E;
+    overflow-x: hidden;
+}
+
+body::after {
+    -webkit-animation: grain 8s steps(10) infinite;;
+    animation: grain 8s steps(10) infinite;
+    background-image: url('https://cdn.monstercat.com/background-tile.webp');
+    content: "";
+    position: fixed;
+    height: 300%;
+    width: 300%;
+    top: -100%;
+    left: -50%;
+    opacity: 0.5;
+    -webkit-animation: grain 8s steps(10) infinite;
+    -moz-animation: grain 8s steps(10) infinite;
+    -o-animation: grain 8s steps(10) infinite;
+    animation: grain 8s steps(10) infinite;
+    z-index: -2;
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
+
+
+.soc-med a i{
+    @apply text-white text-[1.4rem]
+}
+
+.date p,.date span{
+    writing-mode: vertical-lr;
+    font-family: 'Montserrat', 'Arial, Helvetica, sans-serif';
+}
+
+.album-content{
+ grid-template-columns: 1fr 1fr;
+}
+
+.cover-title button{
+    @apply bg-accent px-[2rem] py-[1.2rem] mt-[4rem] border-accent border-2
+}
+
+.cover-title button:last-child{
+    @apply bg-transparent border-white border-2
+}
+
+.cover-title h1, .about-monstercat-wrapper h1,.h1-contact, .partnerships-wrapper h1{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F1F1F1;
+}
+
+.contact-us-wrapper span,.press-media-wrapper span{
+    -webkit-text-fill-color: white;
+}
+
+.player{
+    padding: 1.4rem 1.2rem;
+    border: 1px solid white;
+
+}
+
+.player a{
+    padding: 8px;
+}
+
+.player a i{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.music-list p{
+    @apply font-montserrat antialiased tracking-normal
+}
+
+.home::after{
+    content: "";
+    background-image: linear-gradient(0deg, #110F0F -10%, rgba(188, 184, 184, 0) 60%), url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Frelease%2FMCLP017%2Fcover%3F2ee434f2-4499-4c30-a937-4aec2b4ac1fc&width=1024');
+    
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    filter: blur(5px) brightness(40%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    transform: scale(1.02);
+}
+
+.soc-med-footer a{
+    @apply text-[20px]
+}
+
+
+.about::after{
+    content: "";
+    background-image: linear-gradient(0deg, #110F0F -10%, rgba(121, 121, 121, 0) 90%);
+    
+    z-index: -1;
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transform: scale(1.03);
+}
+
+video{
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    z-index: -1;
+    filter: blur(5px) brightness(40%);
+}
+
+.what-we-do-wrapper p{
+    @apply font-montserrat italic text-[18px] leading-[1.75] tracking-normal
+}
+
+.values-wrapper .col1 h3{
+    @apply mb-[1rem]
+}
+
+.tns-nav button{
+    width: 78px;
+    height: 6px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 0 10px;
+}
+
+.tns-nav{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tns-nav .tns-nav-active{
+    background-color: white;
+    border: none;
+}
+
+
+.section{
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @apply p-[1rem] w-[240px] h-[240px]
+    text-center font-semibold border-white border-[1px] border-r-[0]
+}
+
+.aa{
+    background-image: url('https://cdn.monstercat.com/about/bg-link-about.webp');
+}
+
+.b{
+    background-image: url('https://cdn.monstercat.com/about/bg-link-careers.webp');
+
+}
+
+.c{
+    background-image: url('https://cdn.monstercat.com/about/bg-link-diversity.webp');
+}
+
+.d{
+    background-image: url('https://cdn.monstercat.com/about/bg-link-environment.webp');
+}
+
+.e{
+    background-image: url('https://cdn.monstercat.com/about/bg-link-contact.webp');
+}
+
+.section a{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    @apply w-[100%]
+}
+
+
+.contact::before{   
+    content: "";
+    background-image: linear-gradient(0deg, #120F10 -10%, rgba(136, 136, 136, 0.3) 60%), url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fcdn.monstercat.com%2Fcontact%2Fbg-contact-us.webp&width=1920');
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    filter: blur(5px) brightness(40%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transform: scale(1.02);
+}
+
+.btn-demo a{
+    @apply font-montserrat px-[.8rem] py-[.8rem] border-white border-[1px] inline-block
+}
+
+.faq ul li{
+    @apply border-white border-[1px] cursor-pointer
+}
+
+.faq ul li h6{
+    @apply p-[32px] font-montserrat text-[18px] tracking-normal font-semibold
+}
+
+/* ul li.active .collapsible{
+    max-height: 500px;
+}
+
+.collapsible p, .collapsible a{
+    @apply font-montserrat text-[18px] tracking-normal italic
+}
+
+.collapsible{
+    /* transition: max-height 0.3s linear, padding 0.2s linear; */
+
+    /* @apply px-[32px] py-[16px]
+} */ 
+
+
+.accordionList.active h6{
+    background-color: white;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+.search-desc-tags a i{
+    @apply text-[14px]
+}
+
+.search-desc-tags a{
+    @apply border-white border-[1px] px-[1rem] py-[.8rem] inline-block
+    text-[12px] 
+}
+
+.details a{
+    @apply text-[32px] leading-[1]
+}
+
+.details h5{
+    @apply text-[14px] font-montserrat mb-[48px] mt-[1rem] tracking-normal text-[#c4c4c4]
+}
+
+.details p{
+    @apply text-[18px] tracking-normal italic font-montserrat leading-[1.75]
+}
+
+.prev-next a{
+    @apply font-montserrat tracking-normal p-2
+}
+
+
+.learn-more-wrapper img{
+   overflow-clip-margin: content-box;
+}
+
+.back-img-1{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #111111 80%),url('https://storage.googleapis.com/monstercat-content/article/8dc2d8f5-a62e-4f3f-9ba9-74870ed38f2f/cover-Blog%20Post%20Asset%20SizesBlog%20Post_McatBlog.jpg?Expires=1679623006&GoogleAccessId=whitelist2%40connect-1321.iam.gserviceaccount.com&Signature=gns28sj3UU8v0DMKgRwZKwCkvXgPsipw4BeyU93YmGgQ1sVLBOUNoVYaPtKiQW%2FOhwNsrjcPjLQLCi1AhKb4PWyqiB79%2BCWIJYsV1iFRmtj72aNTvBICr2xm673ZET7SuvVkzD7wdRPM8%2B5c6wqqMzPuW54OjMkBX%2BTMt9Wi6iac4Aswq4EbbNuUX%2F5OysQaJAJzBBdrapVPqb01r6c%2F2alVEGiY7cPI1C8lJ%2F2OiCD7tnWSYfbHHs%2BzQ28Ud97AFkUQj2pdWvgTDCIf7uuVMhbYWhYfn3q3PQ6%2FWl4wxdJq8Z4JiEdIYkQC1k7GUnW3cZa2Cq6TNhfpd%2FErc5PzPg%3D%3D&response-content-disposition=inline&response-content-type=image%2Fjpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.back-img-2{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #111111 80%),url('/dist/img/back2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.back-img-3{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #111111 80%),url('https://storage.googleapis.com/monstercat-content/article/4e49390f-191b-4301-bdd1-ac319e193729/cover-Blog%20Post%20Asset%20Sizes_%20Bishu%202022Blog%20Post_McatBlog.jpg?Expires=1679625426&GoogleAccessId=whitelist2%40connect-1321.iam.gserviceaccount.com&Signature=c1U2lBQdGwjxq9o4EcymyDG89SYIUTPghAPcjSA%2BkDXWOCp7I5HY7GAkOp0EuUkBKRQ4HrYe8v4XbCVlNHHH5EAJ0exhyMtF2ug7D%2B3IQ%2F6O%2BIPKAnApTrcaf8JPZ5%2B8dxxnBbCY3bg%2F6nEPy5Q4w2ar2IUYrcz6YbF3EnOQlX1MWg7SmVkgAYX1h8b2G1VOeUHU1l7rJ2rCfYDHDKiJeKo7if%2BQ5B1PwlzMqzkcOC5EXracy%2FhXzUuu3l60E164mCB91384cCGlFCmRF5qDkCMLa4QHAJotbe1iik8bYLxDKCbLU2Q6FmpZN7qfxZPOw4PTU2N2Ak6fZl3t9l8j0w%3D%3D&response-content-disposition=inline&response-content-type=image%2Fjpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+
+.news-slider .read-more p{
+    @apply font-montserrat italic text-[18px] leading-[1.75] tracking-normal
+}
+
+.partnerships-wrapper a{
+    @apply font-montserrat text-[14px] font-bold py-[1rem] px-[1.2rem] mr-2 bg-white  inline-block text-black
+}
+
+.partnerships h2{
+    @apply text-[45px] 
+}
+
+.partnerships p{
+    @apply font-montserrat italic text-[18px] leading-[1.75] tracking-normal
+}
+
+.partnerships-container .cont img{
+    object-fit: cover;
+}
+
+
+.partnerships-container .cont{
+
+        background-image: url('https://cdx.monstercat.com/resized/cff51b855a7cd6d015f4b7e4ab01895f2d6f91da/600.webp');
+         background-size: cover;
+         background-position: center;
+         width: 100%;
+         height: 350px;
+}
+
+.partnerships-container .cont-2{
+
+    background-image: url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Fapi%2Farticle%2F9378877d-4949-4e4e-826e-4fc0e6c82cc6%2Fcover&width=600');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 350px;
+}
+
+.partnerships-container .cont-3{
+
+    background-image: url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Fapi%2Farticle%2F8bb30545-1a98-4978-a0ea-56d71fc746bd%2Fcover&width=600');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 350px;
+}
+
+.partnerships-container .cont-4{
+
+    background-image: url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Fapi%2Farticle%2Fc377775d-1161-4cc1-889a-43120c01c2ff%2Fcover&width=600');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 350px;
+}
+
+.partnerships-container .cont-5{
+
+    background-image: url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Fapi%2Farticle%2F86a70483-d9d6-48a9-b817-771d8b40f916%2Fcover&width=600');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 350px;
+}
+
+.partnerships-container .cont-6{
+
+    background-image: url('https://cdx.monstercat.com?encoding=webp&url=https%3A%2F%2Fwww.monstercat.com%2Fapi%2Farticle%2Fef1da1e6-24c1-427b-88a9-c12bbbb2ab25%2Fcover&width=600');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 350px;
+}
+
+.cont-details{
+    transition: all .3s ease-in-out;
+    z-index: 5;
+}
+
+.cont:hover .cont-details{
+    top: 8.25rem;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+
+.co{
+    width: 100%;
+         height: 350px;
+         background-color: rgba(17, 14, 14, 0%);
+         transition: all .3s ease-in-out;
+}
+
+.cont:hover .co{
+         background-color: rgba(17, 14, 14, 60%);
+         transition: all .3s ease-in-out;
+}
+
+.platforms img{
+    width: 100%;
+}
+
+.partnerships::after{
+    content: "";
+    background-image: linear-gradient(0deg, #120F10 -10%, rgba(136, 136, 136, 0.3) 60%), url('https://cdx.monstercat.com/resized/9e80837253da7fadbb6d4b004503503009afd506/1920.webp');
+    
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    filter: blur(5px) brightness(50%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transform: scale(1.02);
+}
+
+.pcont{
+    @apply border-white border-[1px]
+}
+
+.pcont p{
+    @apply leading-[25px]
+}
+
+.name{
+    width: 250px;
+}
+
+.name p{
+    @apply text-[15px]
+    my-[1rem]
+}
+
+.name h5{
+    @apply text-[18px] font-montserrat italic tracking-normal font-semibold my-[1rem]
+}
+
+.interested-wrapper img{
+    overflow-clip-margin: content-box;
+ }
+
+ .interested-wrapper h2{
+    @apply text-[28px] tracking-[.2rem]
+ }
+
+ .rc-proj-slider img {
+    width: 100%;
+    @apply mb-[1rem]
+ }
+
+ .rc-proj-slider a{
+
+ }
+
+ .form label{
+    @apply mb-[.4rem] font-semibold text-[#898888]
+ }
+
+ .form label,input,select{
+    @apply font-montserrat tracking-normal
+ }
+
+ .form input,select{
+    @apply bg-transparent border-[#898888] border-[1px] p-[.7rem]
+ }
+
+ .collapsable {
+    max-height: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+
+
+.accordionList.active .collapsable {
+    max-height: 500px;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+
+.accordionList.active i {
+    transition: all 0.5s ease;
+    transform: rotate(45deg);
+}
+
+
+
+
